@@ -52,6 +52,9 @@ def plot_histogram(data):
     plt.xlabel('Цена (руб)')
     plt.ylabel('Количество диванов')
     plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+    # Сохранение графика как изображения
+    plt.savefig('histogram_prices.png')
     plt.show()
 
 # Запуск процесса парсинга
@@ -64,3 +67,4 @@ input_file = 'raw_prices.csv'
 output_file = 'cleaned_prices.csv'
 cleaned_data = process_data(input_file, output_file)
 plot_histogram(cleaned_data)
+
